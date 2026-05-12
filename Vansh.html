@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<body ng-app>
+    <div ng-init="salary=50000;department=['HR','IT','Sales']">
+        <h1>Employee</h1>
+        Employee Name:
+        <input type="text" ng-model="emp">
+        <br><br>
+        <button ng-click="status='Employee Added'">
+            Add Employee
+
+        </button>
+        <h2>{{status}}</h2>
+        <h2>{{emp|uppercase}}</h2>
+        <h2>{{salary |currency:'₹'}}</h2>
+        <h3>Department</h3>
+        <p ng-repeat="d in departments">
+            {{d |lowercase}}
+        </p>
+
+
+    </div>
+    
+</body>
+</html>

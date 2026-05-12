@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app>
+    <div ng-init="ticket=250;movies=['Puspa','Kgf','RRR']">
+    <h1>movie Booking</h1>
+    Enter Name:
+    <input type="text" ng-model="user">
+    <br><br>
+   <button ng-click="book='Ticket Booked'">
+    Book ticket
+    </button>
+    <h2>{{book}}</h2>
+    <h2>{{user|uppercase}}</h2>
+    <h2>{{ticket|currency}}</h2>
+    <ul>
+        <li ng-repeat="m in movies">
+            {{m}}
+
+        </li>
+    </ul>
+    <p ng-show="true">
+        Seats Available
+    </p>
+</div>
+    </body>
+    
+</body>
+</html>
