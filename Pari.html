@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js">
+
+    </script>
+</head>
+<body ng-app>
+    <div ng-init="courses=['HTML','CSS','AngularJS'];price=3000">
+        <h1>Online Course Portal</h1>
+        Student Name:
+        <input type="text" ng-model="Student">
+        <br><br>
+        <button ng-click="msg='Course Purchase'">
+            Buy Course
+        </button>
+        <h2>{{msg}}</h2>
+        <h2>{{Student|uppercase}}</h2>
+        <h2>{{price|currency:'₹'}}</h2>
+        <p ng-repeat="c in courses">
+            {{c|lowercase}}
+        </p>
+        <h2 ng-show="true">
+            Courses Available
+        </h2>
+
+    </div>
+    
+</body>
+</html>
