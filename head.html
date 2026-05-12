@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app>
+    <div ng-init="nums=[10,20,30,40]">
+        <p ng-repeat="n in nums">
+            {{n}}
+        </p>
+    </div>
+   <input type="text" ng-model="city">
+   <h2>{{city|uppercase}}</h2>
+   <input type="text" ng-model="country">
+   <h3>{{country|lowercase}}</h3>
+   <button ng-click="msg='welcome students'">
+    click here
+   </button>
+   <h2>{{msg}}</h2>
+   <div ng-init="a=10;b=20;">
+<h2>{{a}}</h2>
+<h2>{{b}}</h2>
+
+   </div>
+   <div ng-init="cars=['bmv','audi','kia']">
+   <p ng-repeat="c in cars">
+   {{c|uppercase}}
+   </p>
+   </div>
+
+   
+    
+</body>
+</html>

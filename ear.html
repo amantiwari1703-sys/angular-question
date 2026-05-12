@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app>
+<h1>welcome to angularjs</h1>    
+<h2>{{"hello students"}}</h2>
+<h2 ng-bind="'angularjs learning'"></h2>
+<div ng-init="name='Sandeep'">
+    <h3>{{name}}</h3>
+    
+</div>
+<input type="text" ng-model="username">
+<h4>{{username}}</h4>
+ <button ng-click="count=count+1">click</button>   
+ <h1>{{count}}</h1>
+ <h2 ng-show="true">this text is visible</h2>
+ <h2 ng-show="false">hidden text</h2>
+ <div ng-init="name='angularjs'">
+  <h5>{{name| uppercase}}</h5>  
+  <div ng-init="name='ANGULARJS'">
+    <h2>{{name |lowercase}}</h2>
+  </div>
+  <div ng-init="price=5000">
+    <h2>{{price|currency}}</h2>
+  </div>
+    <div ng-init="salary=25000">
+        <h2>{{salary|currency:'₹'}}</h2>
+    </div>
+    <body ng-app>
+   
+    <div ng-init="students=['aman','ravi','neha']">
+<ul>
+<li ng-repeat=" x in students">
+    {{x}}
+</li>
+</ul>
+    </div>
+    
+    
+
+
+
+  
+    
+    
+  
+
+  
+
+
+</body>
+</html>

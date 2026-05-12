@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<body ng-app>
+ <div ng-init="course='angularjs';fees=15000">
+    <h1>Student Registration Form </h1>
+    Student Name:
+    <input type="text" ng-model="name">
+    <br><br>
+    City:
+    <input type="text" ng-model="city">
+    <br><br>
+    <button ng-click="msg='Registration Successfull'">
+        Register
+    </button>
+    <h2>{{msg}}</h2>
+    <h3>{{name |uppercase}}</h3>
+    <h3>{{city |lowercase}}</h3>
+    <h3>{{course|uppercase}}</h3>
+    <h3>{{fees |currency}}</h3>
+    <p ng-show="true">
+        Form is Active
+    </p>
+ </div>   
+    
+</body>
+</html>
