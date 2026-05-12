@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app>,
+    <div ng-init="students=['Ram','Shyam','Mohan'];fees=12000">
+        <h1>School Dashboard</h1>
+        Pricipal Name:
+        <input type="text" ng-model="principal">
+        <br><br>
+        <button ng-click="msg='Dashboard loaded'">
+            Load
+        </button>
+ <h2>{{msg}}</h2>
+ <h2>{{principal|uppercase}}</h2>
+ <h2>{{fees |currency:'₹'}}</h2>
+ <h3>Student List</h3>
+ <p ng-repeat="s in students">
+    {{s|lowercase}}
+ </p>
+
+    </div>
+    
+</body>
+</html>
